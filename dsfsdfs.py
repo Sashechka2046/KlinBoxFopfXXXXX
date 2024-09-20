@@ -1,9 +1,12 @@
-n = 111111
-g = 0
-k = 0
-while n != 0:
-    l = n % 10
-    g += l * 2 ** k
-    n = n // 10
-    k += 1
-print(g)
+def triangle(h, depth = 1, n = 'L'):
+    if h % 2 != 0 and depth == h // 2 + 1:
+        print(n * depth)
+        return
+    if h % 2 == 0 and depth == h // 2:
+        print(n * depth)
+        print(n * depth)
+        return
+    print(n * depth)
+    triangle(h, depth = depth + 1)
+    print(n * depth)
+triangle(8)
