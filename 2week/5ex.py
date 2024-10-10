@@ -6,7 +6,7 @@ for j in range(1, N + 1):
         p.append(1)
     mx.append(p)
     p = []
-
+#mx =[[0 for i in range(N)] for j in range(M)]
 
 def x(mx, N, M, j, c, d=1):
     if d == -1:
