@@ -1,41 +1,30 @@
-# b = int(input())
-a = list(map(int, input().split()))
-t = []
+class Tree:
+    def __init__(self, arr):
+        self.arr = arr
+        self.size = len(arr)
+        self.main = 0
+        self.i_main = 0
+        self.right = []
+        self.left =[]
 
-def r(t, a, m):
-
-    if sum(t) == m:
-        return t
-
-    if a == []:
-        return
-
-    first = r(t.copy(), a[:-1], m)
-    if first == None:
-        second = r(t.copy() + [a[-1]], a[:-1], m)
-        return second
-    else:
-        return first
-
-
-if sum(a) % 3 == 0:
-    m = sum(a) // 3
-    g = r(t, a, m)
-    if g != None:
-        for i in g:
-            a.remove(i)
-        g = r(t, a, m)
-        if g != None:
-            for i in g:
-                a.remove(i)
-            g = r(t, a, m)
-            if g != None:
-                print(1)
+    def SiftDown(self, value):
+        if self.arr == []:
+            self.main = value
+            self.i_main = 0
+        if value > self.main:
+            if not self.right:
+                self.right.append(value)
             else:
-                print(0)
-        else:
-            print(0)
-    else:
-        print(0)
-else:
-    print(0)
+                tr
+    def find_p(self, value):
+
+
+l = 9 # int(input())
+a = list(map(int, '7 3 2 1 9 5 4 6 8'.split()))
+
+mons = Tree([])
+
+for i in a:
+    Tree.Siftdown(i)
+
+print(mons.tree)
